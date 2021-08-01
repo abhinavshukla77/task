@@ -1,0 +1,138 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: "Steinbeck";
+}
+
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+#back{
+    width: 100%;
+    height: 100%;
+    background-image: url('./images/bg.png');
+    overflow : hidden;
+}
+#scene{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#scene canvas{
+    width: 100%;
+}
+
+#nav{
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.603);
+    height: 60px;
+    backdrop-filter: blur(10px);
+    z-index: 2;
+}
+
+#nav a{
+    color: white;
+    font-size: 12px;
+    margin-left: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#nav a:nth-child(1){
+    margin-left: 0%;
+}
+
+#nav img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#ovr{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding-top: 70px ;
+}
+
+#ovr h1{
+    font-family: "Love";
+    color: white;
+    text-transform: uppercase;
+    font-size: 140px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 125px;
+}
+
+#ovr span{
+    font-size: 80px;
+    margin: 0 30px;
+    color: red;
+}
+
+#scnd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#ovr p{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    opacity: .6;
+    font-weight: 100;
+}
+
+#circle{
+    position: relative;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+    animation: anim 8s linear infinite  both;
+    margin-top: 75px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#mini{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.5s;
+}
+
+#circle:hover #mini{
+    width: 80px;
+    height: 80px;
+    background-image: url(./images/bg.png);
+    background-size: 430% 430%;
+    background-position: center;
+}
+
+@keyframes anim{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
